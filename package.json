@@ -1,0 +1,19 @@
+{
+  "name": "redux-todo",
+  "version": "1.0.0",
+  "description": "React + Redux + Immutable",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trungutt/redux-todo.git"
+  },
+  "author": "trungutt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/trungutt/redux-todo/issues"
+  },
+  "homepage": "https://github.com/trungutt/redux-todo#readme"
+}
