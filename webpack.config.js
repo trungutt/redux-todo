@@ -2,21 +2,12 @@ import path from 'path';
 import webpack from 'webpack';
 
 module.exports = {
+	debug: true,
 	entry: [
 		'webpack-dev-server/client?http://localhost:8080', // Setting the URL for the hot reload
 		'webpack/hot/only-dev-server', // Reload only the dev server
-		'./src/index.js',
+		path.resolve(__dirname, 'src/index'),
 	],
-	module: {
-		loaders: [{
-			test: /\.jsx?$/,
-			exclude: /node_modules/,
-			loader: 'react-hot!babel', // Include the react-hot loader
-		}],
-	},
-	resolve: {
-		extensions: ['', '.js', '.jsx'],
-	},
 	output: {
 		path: path.join(__dirname, '/dist'),
 		publicPath: '/',
@@ -28,5 +19,15 @@ module.exports = {
 	},
 	plugins: [
 		new webpack.HotModuleReplacementPlugin(), // Wire in the hot loading plugin
-	]
+	],
+	module: {
+		loaders: [{
+			test: /\.jsx?$/,
+			exclude: /node_modules/,
+			loader: 'react-hot!babel', // Include the react-hot loader
+		}],
+	},
+	resolve: {
+		extensions: ['', '.js', '.jsx'],
+	},
 };

@@ -6,6 +6,13 @@
 	"plugins": [
 		"react"
 	],
+	"env": {
+		"es6": true,
+		"browser": true,
+		"node": true,
+		"jquery": true,
+		"mocha": true
+	},
 	"rules": {
 		"no-tabs": "off",
 		"indent": [
@@ -14,6 +21,19 @@
 			{
 				"SwitchCase": 1
 			}
+		],
+		"react/jsx-filename-extension": [
+			1,
+			{
+				"extensions": [
+					".js",
+					".jsx"
+				]
+			}
+		],
+		"react/jsx-indent": [
+			2,
+			"tab"
 		]
 	}
 }
